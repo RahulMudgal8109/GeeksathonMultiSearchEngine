@@ -20,10 +20,7 @@ searchForm.addEventListener('submit', function (e) {
 
         googleSearch(searchInput.value);
       }
-      else if(searchEngine[i].value == "gemini")
-      {
-        
-      }
+      
 
 
     }
