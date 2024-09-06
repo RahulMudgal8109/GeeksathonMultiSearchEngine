@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2504/2504914.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        .result {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .link {
+            text-decoration: none;
+        }
+
+        .link .domain {
+            color: gray;
+            margin: 0px;
+        }
+        .snippet
+        {
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .pagenation
+        {
+            display: flex;
+            background-color: transparent;
+            border: none;
+        }
+        .active
+        {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="./wikipedia/index.html">Wikipedia</a>
+        <a href="./gemini/index.html">Geminia</a>
+       
+       
+    </nav>
+
+    <div class="container">
+        <h1 class="m-5">Multi search engine</h1>
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo"class="logo">
+            
+        <form name="searchForm" id="searchForm">
+            <label for="fname">Search Here</label><br>
+            <input type="text" id="text" name="search" style="width: 400px;height: 40px;border: 1px solid gray;border-radius: 30px;padding: 20px;"><br>
+            <div class="choices d-none" id="choices">
+                <input type="radio" id="google" name="searchEngine" value="google" checked="checked">
+                <label for="google">Google</label>
+                <input type="radio" id="gemini" name="searchEngine" value="gemini">
+                <label for="gemini">Gemini</label>
+                <input type="radio" id="wikipedia" name="searchEngine" value="wikipedia">
+                <label for="wikipedia">Wikipedia</label>
+            </div>
+            <div class="searchBtn mt-3">
+                <button type="submit" id="submitBtn" style="width: 150px;height: 40px;background-color: #4cdbff;border: 1px solid black;border-radius: 30px;">Search</button>
+            </div>
+        </form>
+        </div>
+        <div class="container mt-5">
+            <div class="results" id="results">
+                <!-- <div class="result">
+                    <a href="https://www.india.gov.in/" class="link">
+                        <p class="domain">www.india.gov.in</p>
+                        <h4 class="title">National Portal of India</h4>
+                    </a>
+                    <div class="snippet">7 hours ago — National Portal of India provides a single-window access to
+                        information and services that are electronically delivered from all Government Departments, ...
+                    </div>
+    
+                </div> -->
+                
+            </div>
+            <div class="pagination" id="pagination"></div>
+            
+        </div>
+        <script src="google.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>
